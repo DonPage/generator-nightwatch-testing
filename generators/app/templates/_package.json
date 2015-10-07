@@ -1,0 +1,12 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "dependencies": {
+    "chromedriver": "~2.15.0",
+    "nightwatch": "~0.6.12",
+    "nightwatch-pages": "*",
+    "phantomjs": "~1.9.17",
+    "selenium-server": "~2.45.0",
+    "dalek-browser-ie": "0.0.5"
+  }
+}
