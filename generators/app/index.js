@@ -2,8 +2,8 @@
 
 var path = require('path');
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+//var chalk = require('chalk');
+//var yosay = require('yosay');
 var _s = require('underscore.string');
 var mkdirp = require('mkdirp');
 
@@ -170,99 +170,21 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
+  test: function () {
+    mkdirp('tests');
+    this.fs.copyTpl(
+      this.templatePath('_tests/main.js'),
+      this.destinationPath('tests/main.js'),
+      this.nightwatch
+    );
+  },
+
 
 
 
   install: function () {
     this.installDependencies()
   }
-
-
-
-
-
-  //prompting: function () {
-  //  var done = this.async();
-  //
-  //  // Have Yeoman greet the user.
-  //  this.log(yosay(
-  //    'Welcome to the dandy NightwatchTesting generator!'
-  //  ));
-  //
-  //  var prompts = [
-  //    {
-  //      name: 'moduleName',
-  //      message: 'Project name?',
-  //      default: (this.appname) ? this.appname : 'TestProject'
-  //    },
-  //    {
-  //      type: 'checkbox',
-  //      name: 'features',
-  //      message: 'What folders would you like?',
-  //      choices: [{
-  //        name: 'Pages',
-  //        value: 'includePages',
-  //        checked: true
-  //      }, {
-  //        name: 'Data',
-  //        value: 'includeData',
-  //        checked: true
-  //      }, {
-  //        name: 'Assertions',
-  //        value: 'includeAssertions',
-  //        checked: true
-  //      }, {
-  //        name: 'Commands',
-  //        value: 'includeCommands',
-  //        checked: true
-  //      }]
-  //    }
-  //  ];
-  //
-  //  this.prompt(prompts, function (answers) {
-  //    var features = answers.features;
-  //    // To access props later use this.props.someOption;
-  //
-  //    function hasFeature(feat) {
-  //      return features && features.indexOf(feat) !== -1;
-  //    }
-  //
-  //    this.includePages = hasFeature('includePages');
-  //    this.includeData = hasFeature('includeData');
-  //    this.includeAssertions = hasFeature('includeAssertions');
-  //    this.includeCommands = hasFeature('includeCommands');
-  //
-  //    done();
-  //  }.bind(this));
-  //},
-
-  //writing: {
-  //  app: function () {
-  //    this.fs.copy(
-  //      this.templatePath('_package.json'),
-  //      this.destinationPath('package123.json')
-  //    );
-  //    this.fs.copy(
-  //      this.templatePath('_bower.json'),
-  //      this.destinationPath('bower.json')
-  //    );
-  //  },
-  //
-  //  projectfiles: function () {
-  //    this.fs.copy(
-  //      this.templatePath('editorconfig'),
-  //      this.destinationPath('.editorconfig')
-  //    );
-  //    this.fs.copy(
-  //      this.templatePath('jshintrc'),
-  //      this.destinationPath('.jshintrc')
-  //    );
-  //  }
-  //},
-  //
-  //install: function () {
-  //  this.installDependencies();
-  //}
 
 
 });

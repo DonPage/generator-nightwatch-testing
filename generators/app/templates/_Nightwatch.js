@@ -7,12 +7,12 @@ module.exports = {
   <% if (commands) { %>
   custom_commands_path: './commands',
   <% } %>
-  globals_path: './_globals.json',
+  globals_path: './globals.json',
   live_output: true,
 
   selenium: {
     start_process: true,
-    server_path: './node_modules/selenium-server/lib/runner/selenium-server-standalone-2.38.0.jar',
+    server_path: './node_modules/selenium-server/lib/runner/selenium-server-standalone-2.45.0.jar',
     log_path: './results',
     host: '127.0.0.1',
     port: 4444,
@@ -41,7 +41,7 @@ module.exports = {
     },
 
     <% if (data) { %>
-    globals: './data/config',
+    globals: './data/config.js',
   <% } %>
 
     chrome: {
