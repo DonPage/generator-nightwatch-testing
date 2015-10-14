@@ -1,9 +1,10 @@
 module.exports = {
   'Main': function (client) {
+    var homePage = client.page.homepage();
+    homePage.navigate();
     client
-      .url('<%= url %>')
       .waitForElementVisible('body', 5500)
-      .pause(1000)
+      .pause(2000)
       .end();
 
   }

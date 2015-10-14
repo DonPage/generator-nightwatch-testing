@@ -1,9 +1,10 @@
 module.exports = {
-  load: function () {
-    var url = this.client.globals.urls + '';
-
-    return this.client
-      .url(url)
-      .waitForElementVisible('body', 1000);
+  url: function () {
+    return this.api.globals.urls.homepage + '';
+  },
+  commands: [],
+  elements: {
+    searchBar: { selector: 'input[name=q]' },
+    submitButton: { selector: '[type=submit]' }
   }
 };

@@ -107,7 +107,9 @@ module.exports = yeoman.generators.Base.extend({
       {
         assertions: this.nightwatch.custom_assertion_path,
         commands: this.nightwatch.custom_commands_path,
-        data: this.nightwatch.data
+        pages: this.nightwatch.pages,
+        data: this.nightwatch.data,
+        url: this.nightwatch.url
       }
     );
 

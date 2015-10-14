@@ -7,6 +7,9 @@ module.exports = {
   <% if (commands) { %>
   custom_commands_path: './commands',
   <% } %>
+  <% if (pages) { %>
+  page_objects_path: './pages',
+  <% } %>
   globals_path: './globals.json',
   live_output: true,
 
