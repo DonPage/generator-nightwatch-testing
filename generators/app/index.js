@@ -72,7 +72,7 @@ module.exports = yeoman.generators.Base.extend({
       this.nightwatch.custom_assertion_path = isChecked(answers.folders, 'assertions');
       this.nightwatch.data = isChecked(answers.folders, 'data');
       this.nightwatch.pages = isChecked(answers.folders, 'pages');
-      this.nightwatch.url = answers.url;
+      this.nightwatch.url = answers.url.replace(/\/$/, "");
 
       cb();
     }.bind(this))
@@ -94,6 +94,13 @@ module.exports = yeoman.generators.Base.extend({
       this.templatePath('editorconfig'),
       this.destinationPath('.editorconfig')
     );
+  },
+
+  readme: function () {
+    this.fs.copy(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md')
+    )
   },
 
   nightwatch: function () {
