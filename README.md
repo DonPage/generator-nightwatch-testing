@@ -1,6 +1,6 @@
-# generator-nightwatch-testing [![Build Status](https://secure.travis-ci.org/DonPage/generator-nightwatch-testing.png?branch=master)](https://travis-ci.org/DonPage/generator-nightwatch-testing)
+# generator-nightwatch-testing 
 
-> [Yeoman](http://yeoman.io) generator
+> This will be a [yeoman](http://yeoman.io/) generator to get you started with NightwatchJS testing. Will be *slowly* maintained by [myself](https://github.com/DonPage).
 
 
 ## Getting Started
