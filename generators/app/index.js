@@ -165,6 +165,7 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('data/config.js'),
         this.nightwatch
       );
+      this.bulkCopy('_data/naughtyStrings.js', 'data/naughtyStrings.js')
     }
   },
 
