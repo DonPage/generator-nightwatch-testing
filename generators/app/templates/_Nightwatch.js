@@ -37,14 +37,19 @@ module.exports = {
         path: './results/screenshots'
       },
       desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true
       }
     },
 
     <% if (data) { %>
-    globals: './data/config.js',
+    globals: {
+        waitForConditionTimeout: 60000,
+        urls: {
+          homepage: "<%= url %>"
+      }
+    },
   <% } %>
 
     chrome: {
